@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import Routes from "./Routes";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="settingBG" style={{ backgroundColor: '#cedfeb'}}>
       <Routes />
     </div>
   );
