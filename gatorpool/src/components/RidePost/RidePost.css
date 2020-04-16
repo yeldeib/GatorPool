@@ -1,0 +1,10 @@
+@media all and (min-width: 480px) {
+    .RidePost {
+      padding: 60px 0;
+    }
+  
+    .RidePost form {
+      margin: 0 auto;
+      max-width: 1024px;
+    }
+  }
