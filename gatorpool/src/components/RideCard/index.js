@@ -10,7 +10,7 @@ class RideCard extends React.Component {
     render() {
         return(
             <div>
-                <CardGroup>
+                <CardGroup className = "card">
                     <CardHeader style={{ backgroundColor: '#dce7f7'}}>{this.props.newCard.location}</CardHeader>
                     <Card body inverse style={{ backgroundColor: '#92b2d4', borderColor: '#92b2d4' }}>
                         <CardTitle>Driver: {this.props.newCard.driver}</CardTitle>

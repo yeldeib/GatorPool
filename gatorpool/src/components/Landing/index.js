@@ -21,7 +21,9 @@ function Landing(props) {
             </div>
             <br></br>
             <div className="loginButton">
-                <Button size="lg" block style={{ backgroundColor: '#92b2d4', borderColor: '#92b2d4'}}>Sign Up</Button>
+                <Button size="lg" block style={{ backgroundColor: '#92b2d4', borderColor: '#92b2d4'}} onClick ={() => {
+                    props.history.push("/signup");
+                }}>Sign Up</Button>
             </div>
         </div>
     );
