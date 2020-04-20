@@ -1,7 +1,7 @@
 .welcomeText {
     text-align: center;
     color: #270468;
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 0px;
 }
 
@@ -15,3 +15,18 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+.gatorID{
+    color: #270468;
+}
+
+.drive{
+    padding-top: 25px;
+}
+
+.driveNo{
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-left: 30px;
+}
+
