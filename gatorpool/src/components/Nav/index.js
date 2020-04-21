@@ -12,7 +12,14 @@ function Navs(props) {
             <Collapse isOpen={!collapsed} navbar>
                 <Nav navbar>
                     <NavItem>
-                        <NavLink href="">Profile</NavLink>
+                        <NavLink href="" onClick ={() => {
+                                props.history.push("/profile");
+                            }}> Profile </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="" onClick ={() => {
+                                props.history.push("/Ridelist");
+                            }}> Home </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink href="" onClick ={() => {

@@ -1,0 +1,21 @@
+.proimg { 
+    border:5px solid #133355;
+    border-radius: 8px;
+    
+    height:300px;
+    width:300px;
+ }
+
+ .center {
+    text-align: center;
+    color: #133355;
+ }
+
+ .driver {
+    text-align: center;
+    color: #1b8f23;
+ }
+
+.upcomin {
+    color: #133355;
+}
