@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import GatorLogo from './GatorLogo.png'
+import {Row, Col, Container, Button} from 'reactstrap';
+import { Redirect, useHistory } from 'react-router-dom';
 import "./Login.css";
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
+  // let history = createHistory();
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -12,10 +18,22 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    console.log("Submit")
+    // return <Redirect to='http://localhost:3000/rideList' />
+    // renderRedirect();
+    history.push("/rideList")
   }
 
   return (
-    <div className="Login">
+    <div>
+      <div className="Login">
+      <Container>
+    <Row className="justify-content-md-center">
+        <Col md="auto">
+        <img className="my_image" src={GatorLogo} />  
+        </Col>
+    </Row>
+</Container>
       <form onSubmit={handleSubmit}>
         <FormGroup controlId="email" bsSize="large">
           <ControlLabel>Email</ControlLabel>
@@ -34,10 +52,12 @@ export default function Login() {
             type="password"
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        <Button block size="large" block style={{ backgroundColor: '#4CAF50', borderColor: '#4CAF50'}} disabled={!validateForm()} type="submit">
           Login
         </Button>
       </form>
     </div>
+    </div>
+    
   );
 }

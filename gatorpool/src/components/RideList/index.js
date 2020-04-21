@@ -50,15 +50,12 @@ class RideList extends React.Component{
 
     addItem(e){
         e.preventDefault();
-        const newRide = this.state.currentRide;
-        console.log(newRide);
-        
-        let rides = this.state.rides;
-        console.log(rides);
 
-        rides.push(newRide);
+        const rides = this.state.rides.concat(this.state.currentRide);
+
         this.setState({rides})
         console.log(rides);
+        this.state.currentRide = {}
     }
 
     render(){
