@@ -15,7 +15,7 @@ class RideList extends React.Component{
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
-                    others: "Tom Brady"
+                    others: "George Washington, Tom Brady"
                 },
                 {
                     location: "Sams Club",
