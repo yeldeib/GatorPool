@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../Nav';
 import RideCard from '../RideCard';
+import ProRider from '../ProRider';
 import {Row, Col, Container} from 'reactstrap';
 import GatorLogo from '../Landing/GatorLogo.png'
 import './Profile.css'
@@ -16,7 +17,7 @@ class Profile extends React.Component{
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
-                    others: "Tom Brady"
+                    others: "George Washington, Tom Brady"
                 }
             ],
             currentRide:{}
@@ -27,7 +28,7 @@ class Profile extends React.Component{
         let customCards = this.state.rides.map(newCard => {
             return (
                 <Col sm="4">
-                    <RideCard newCard={newCard} />
+                    <ProRider newCard={newCard} />
                 </Col>
             )
         })
@@ -42,7 +43,7 @@ class Profile extends React.Component{
                     </Row>
                     <Row>
                         <Col className="justify-content-md-center">
-                            <h2 className="center">Jack Johnson</h2>
+                            <h2 className="center">George Washington</h2>
                         </Col>
                     </Row>
                     <Row>
