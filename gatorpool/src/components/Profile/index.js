@@ -13,7 +13,7 @@ class Profile extends React.Component{
             rides:[
                 {
                     location: "Trader Joes",
-                    day_month: "2020-02-15",
+                    day_month: "2020-04-22",
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
@@ -54,7 +54,7 @@ class Profile extends React.Component{
                     </Row>
                     <Row>
                         <Col className="justify-content-md-center">
-                            <h5 className="center">Hey, I am a music major. I sing and play guitar and I'm from hawaii</h5>
+                            <h5 className="center">Hey, I am a music major. I sing and play guitar and I'm from Hawaii</h5>
                         </Col>
                     </Row>
                 </Container>
