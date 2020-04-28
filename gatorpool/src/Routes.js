@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Login from "./components/Login";
@@ -5,6 +6,7 @@ import RideList from "./components/RideList";
 import Landing from "./components/Landing";
 import Signup from "./components/Signup"
 import Profile from "./components/Profile";
+import ProfileJack from "./components/ProfileJack";
 
 export default function Routes() {
     return (
@@ -24,6 +26,9 @@ export default function Routes() {
         </Route>
         <Route exact path="/profile">
           <Profile />
+        </Route>
+        <Route exact path="/profileJack">
+          <ProfileJack />
         </Route>
       </Switch>
       </BrowserRouter>
