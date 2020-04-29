@@ -34,27 +34,6 @@ class CreateRide extends React.Component{
                             
                         </Row>
                     </FormGroup>
-                    
-                    <FormGroup>
-                        <Row>
-                            <Col sm="2">
-                                <Label>Time: </Label>
-                            </Col>
-                            <Col sm="2">
-                                <Label> Pickup:</Label>
-                            </Col>
-                            <Col sm="3">
-                                <CustomInput type="time" name="when" placeholder="time placeholder" inline />
-                            </Col>
-                            <Col sm="2">
-                                <Label> Dropoff:</Label>
-                            </Col>
-                            <Col sm="3">
-                                <CustomInput type="time" name="drop" placeholder="time placeholder" inline />
-                            </Col>    
-                        </Row>
-                    </FormGroup>
-
                     <FormGroup>
                         <Row>
                         <Col sm="2">
@@ -69,6 +48,18 @@ class CreateRide extends React.Component{
                             <Col sm="4">
                                 <Input type="text" name="others" placeholder="others"/>
                             </Col>
+                        </Row>
+                    </FormGroup>
+                    <FormGroup>
+                        <Row>
+                            <Col sm="2">
+                                <Label>Time: </Label>
+                            </Col>
+                           
+                            <Col sm="3">
+                                <CustomInput type="time" name="when" placeholder="time placeholder" inline />
+                            </Col>
+                            
                         </Row>
                     </FormGroup>
                     
