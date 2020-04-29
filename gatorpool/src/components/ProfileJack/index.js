@@ -18,7 +18,8 @@ class ProfileJack extends React.Component{
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
-                    others: "George Washington, Tom Brady"
+                    others: "George Washington, Tom Brady",
+                    id: '1'
                 }
             ],
             currentRide:{}
