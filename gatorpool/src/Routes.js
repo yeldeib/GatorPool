@@ -9,6 +9,7 @@ import Profile from "./components/Profile";
 import ProfileJack from "./components/ProfileJack";
 import ProfileJohhny from "./components/profileJohnny";
 import ProfileJoel from "./components/ProfileJoel";
+import CreateRide from "./components/CreateRide";
 
 export default function Routes() {
     return (
@@ -38,6 +39,9 @@ export default function Routes() {
       </Switch>
       <Route exact path='/profile3'>
         <ProfileJoel />
+      </Route>
+      <Route exact path='/createRide'>
+        <CreateRide />
       </Route>
       </BrowserRouter>
     );

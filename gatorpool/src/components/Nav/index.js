@@ -26,6 +26,11 @@ function Navs(props) {
                             props.history.push("/");
                         }}> Logout </NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink href="" onClick ={() => {
+                                props.history.push("/createRide");
+                            }}> Create a ride </NavLink>
+                    </NavItem>
                 </Nav>
             </Collapse>
         </nav>

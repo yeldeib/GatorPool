@@ -11,7 +11,7 @@ class RideList extends React.Component{
             rides:[
                 {
                     location: "Trader Joes",
-                    day_month: "2020-04-22",
+                    day_month: "2020-04-29",
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
@@ -20,7 +20,7 @@ class RideList extends React.Component{
                 },
                 {
                     location: "Sams Club",
-                    day_month: "2020-04-22",
+                    day_month: "2020-04-29",
                     when: "8:00",
                     drop: "9:50",
                     driver: "Jack Johnson",
@@ -29,7 +29,7 @@ class RideList extends React.Component{
                 },
                 {
                     location: "SouthWest",
-                    day_month: "2020-04-23",
+                    day_month: "2020-04-30",
                     when: "13:00",
                     drop: "15:50",
                     driver: "Swole Joel",
@@ -72,66 +72,7 @@ class RideList extends React.Component{
         return(
             <div>
                 <Nav />
-                <div>
-                    <h2 className="centering">Create a New Ride:</h2>
-                </div>
-                <Form onSubmit={this.addItem.bind(this)}>
-                    <FormGroup>
-                        <Row>
-                            <Col sm="2">
-                                <Label>Location:</Label>
-                            </Col>
-                            <Col sm="4">
-                                <Input type="text" name="location" placeholder="location" value={this.state.currentRide["location"] || ''} onChange={this.handleInput.bind(this)}/>
-                            </Col>
-                            <Col sm="2">
-                                <Label>Date:</Label>
-                            </Col>
-                            <Col sm="4">
-                                <Input type="date" name="day_month" placeholder="date placeholder" value={this.state.currentRide["day_month"] || ''} onChange={this.handleInput.bind(this)}/>
-                            </Col>
-                        </Row>
-                    </FormGroup>
-                    
-                    <FormGroup>
-                        <Row>
-                            <Col sm="2">
-                                <Label>Time: </Label>
-                            </Col>
-                            <Col sm="2">
-                                <Label> Pickup:</Label>
-                            </Col>
-                            <Col sm="3">
-                                <CustomInput type="time" name="when" placeholder="time placeholder" value={this.state.currentRide["when"] || ''} onChange={this.handleInput.bind(this)} inline />
-                            </Col>
-                            <Col sm="2">
-                                <Label> Dropoff:</Label>
-                            </Col>
-                            <Col sm="3">
-                                <CustomInput type="time" name="drop" placeholder="time placeholder" value={this.state.currentRide["drop"] || ''} onChange={this.handleInput.bind(this)} inline />
-                            </Col>    
-                        </Row>
-                    </FormGroup>
 
-                    <FormGroup>
-                        <Row>
-                            <Col sm="2">
-                                <Label>Driver: </Label>
-                            </Col>
-                            <Col sm="4">
-                                <Input type="text" name="driver" placeholder="driver" value={this.state.currentRide["driver"] || ''} onChange={this.handleInput.bind(this)}/>
-                            </Col>
-                            <Col sm="2">
-                                <Label>Other Passengers: </Label>
-                            </Col>
-                            <Col sm="4">
-                                <Input type="text" name="others" placeholder="others" value={this.state.currentRide["others"] || ''} onChange={this.handleInput.bind(this)}/>
-                            </Col>
-                        </Row>
-                    </FormGroup>
-                    
-                    <Button type="submit"> Submit </Button>
-                </Form>
                 <div>
                     <h2 className="centering">Available Rides: </h2>
                 </div>    
