@@ -4,10 +4,10 @@ import RideCard from '../RideCard';
 import ProRider from '../ProRider';
 import {Row, Col, Container} from 'reactstrap';
 import GatorLogo from '../Landing/GatorLogo.png'
-import './Profile.css'
-import profPic from './gw.jpg';
+import '../Profile/Profile.css';
+import profPic from './ja.jpg';
 
-class Profile extends React.Component{
+class ProfileJohnny extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -18,7 +18,8 @@ class Profile extends React.Component{
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
-                    others: "George Washington, Tom Brady"
+                    others: "George Washington, Tom Brady",
+                    id: '1'
                 }
             ],
             currentRide:{}
@@ -44,7 +45,7 @@ class Profile extends React.Component{
                     </Row>
                     <Row>
                         <Col className="justify-content-md-center">
-                            <h2 className="center">George Washington</h2>
+                            <h2 className="center">Johhny Appleseed</h2>
                         </Col>
                     </Row>
                     <Row>
@@ -55,7 +56,7 @@ class Profile extends React.Component{
                     </Row>
                     <Row>
                         <Col className="justify-content-md-center">
-                            <h5 className="center">Hey, I am a political science major. I'm in ROTC and hope to be in special forces in the future. </h5>
+                            <h5 className="center">Hey, I am a nutritional sciences major. I love the outdoors and often go to the Hail farmers market to get fresh produce on Saturdays</h5>
                         </Col>
                     </Row>
                 </Container>
@@ -67,4 +68,4 @@ class Profile extends React.Component{
         )
     }
 }
-export default Profile;
+export default ProfileJohnny;

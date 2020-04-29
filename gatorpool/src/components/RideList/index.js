@@ -15,7 +15,8 @@ class RideList extends React.Component{
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
-                    others: "George Washington, Tom Brady"
+                    others: "George Washington, Tom Brady",
+                    id: '1'
                 },
                 {
                     location: "Sams Club",
@@ -23,7 +24,8 @@ class RideList extends React.Component{
                     when: "8:00",
                     drop: "9:50",
                     driver: "Jack Johnson",
-                    others: "No one else"
+                    others: "No one else",
+                    id: '2'
                 },
                 {
                     location: "SouthWest",
@@ -31,7 +33,8 @@ class RideList extends React.Component{
                     when: "13:00",
                     drop: "15:50",
                     driver: "Swole Joel",
-                    others: "Ripped Tony"
+                    others: "Ripped Tony",
+                    id: '3'
                 }
             ],
             currentRide:{}
@@ -62,7 +65,7 @@ class RideList extends React.Component{
         let customCards = this.state.rides.map(newCard => {
             return (
                 <Col sm="4">
-                    <RideCard newCard={newCard} />
+                    <RideCard newCard={newCard}/>
                 </Col>
             )
         })
