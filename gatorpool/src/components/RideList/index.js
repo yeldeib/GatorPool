@@ -11,7 +11,7 @@ class RideList extends React.Component{
             rides:[
                 {
                     location: "Trader Joes",
-                    day_month: "2020-04-22",
+                    day_month: "2020-04-29",
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
@@ -19,7 +19,7 @@ class RideList extends React.Component{
                 },
                 {
                     location: "Sams Club",
-                    day_month: "2020-04-22",
+                    day_month: "2020-04-29",
                     when: "8:00",
                     drop: "9:50",
                     driver: "Jack Johnson",
@@ -27,7 +27,7 @@ class RideList extends React.Component{
                 },
                 {
                     location: "SouthWest",
-                    day_month: "2020-04-23",
+                    day_month: "2020-04-30",
                     when: "13:00",
                     drop: "15:50",
                     driver: "Swole Joel",
