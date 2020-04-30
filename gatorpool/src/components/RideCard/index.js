@@ -11,9 +11,22 @@ import limoPic from './limo.jpg'
 const RideCard = (props) => {
     const [fadeIn, setFadeIn] = useState(true);
     const [showPopup, setPopup] = useState(false);
+    const[buttonId, setButtonId] = useState("Join Ride");
+    const[joined, setJoined] = useState(false);
 
-    const toggle = () => setFadeIn(!fadeIn);
+    const updateButtonID = () => {
+        if(joined) {
+            setJoined(false);
+            setButtonId("Leave Ride");
+          setPopup(true);
+        } else {
+            setJoined(true);
+            setButtonId("Join Ride");
+        }
+    }
+   
     const linkName = '/profile' + props.newCard.id;
+
     function handleClick(){
         setFadeIn(!fadeIn);
         setPopup(true);
@@ -24,6 +37,8 @@ const RideCard = (props) => {
         setPopup(false)
          }  
     //console.log(linkName);
+
+ 
 
     return(
         <div>
@@ -36,8 +51,7 @@ const RideCard = (props) => {
                         <br></br>Other Riders: {props.newCard.others}</CardText>
                    
                     <Fade in={fadeIn} >
-
-                        <Button onClick={handleClick} style={{ backgroundColor: '#eb8e1c', borderColor: '#eb8e1c'}}>Join Ride</Button>
+                        <Button onClick={updateButtonID} style={{ backgroundColor: '#eb8e1c', borderColor: '#eb8e1c'}}>{buttonId}</Button>
                     </Fade>
                 </Card>
             </CardGroup>

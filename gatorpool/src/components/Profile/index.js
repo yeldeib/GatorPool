@@ -2,10 +2,11 @@ import React from 'react';
 import Nav from '../Nav';
 import RideCard from '../RideCard';
 import ProRider from '../ProRider';
-import {Row, Col, Container} from 'reactstrap';
+import {Row, Col, Container, Button} from 'reactstrap';
 import GatorLogo from '../Landing/GatorLogo.png'
 import './Profile.css'
 import profPic from './gw.jpg';
+import ProfileEdit from './ProfileEdit';
 
 class Profile extends React.Component{
     constructor(props){
@@ -18,7 +19,8 @@ class Profile extends React.Component{
                     when: "10:30",
                     drop: "11:45",
                     driver: "Johny Appleseed",
-                    others: "George Washington, Tom Brady"
+                    others: "George Washington, Tom Brady",
+                    id: '1'
                 }
             ],
             currentRide:{}
@@ -38,8 +40,12 @@ class Profile extends React.Component{
                 <Nav />
                 <Container>
                     <Row className="justify-content-md-center">
+                        <Col></Col>
                         <Col md="auto">
                             <img className="proimg" src={profPic} />  
+                        </Col>
+                        <Col align='right'>
+                          <ProfileEdit/>
                         </Col>
                     </Row>
                     <Row>
