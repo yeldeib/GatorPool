@@ -53,7 +53,7 @@ const CreateRide = () => {
                                 </Tooltip>
                             </Col>
                             <Col sm="4">
-                                <Input type="text" name="others" placeholder="others" />
+                                <Input type="text" name="others" />
                             </Col>
                         </Row>
                     </FormGroup>
