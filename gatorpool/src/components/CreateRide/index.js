@@ -61,8 +61,7 @@ class CreateRide extends React.Component{
                             </Col>
                             
                         </Row>
-                    </FormGroup>
-                    
+                    </FormGroup>                    
                     <Button type="submit"> Submit </Button>
                 </Form>
             </div>
