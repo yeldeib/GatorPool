@@ -69,6 +69,10 @@ class Profile extends React.Component{
                 <Row>
                     {customCards}
                 </Row>
+                    <h2 style={{padding: 10}}>Reviews</h2>
+                <Container>
+                    
+                </Container>
             </div>
         )
     }

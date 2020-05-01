@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
-import {Form, Modal, Button, ModalBody, ModalHeader, FormGroup, Input, Label, Row} from 'reactstrap';
+import React, { useState } from 'react';
+import { Form, Modal, Button, ModalBody, ModalHeader, FormGroup, Label, Row, Col, InputGroup, InputGroupAddon, InputGroupText, Input  } from 'reactstrap';
+import "./Profile.css";
 
 const ProfileEdit = (props) => {
     const [modal, setModal] = useState(false);
@@ -15,15 +16,33 @@ const ProfileEdit = (props) => {
                 <ModalBody>
                     <Form>
                         <FormGroup>
-                            <Label for='name'>name</Label>
-                            <Input name='name' id='name'></Input>
+                            <Row>
+                                <Col>
+                                    <Label for='first'>first name</Label>
+                                    <Input name='first' id='first'></Input>
+                                </Col>
+                                <Col>
+                                    <Label for='last'>last name</Label>
+                                    <Input name='last' id='last'></Input>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Label for='bio'>Bio</Label>
+                                    <Input type="textarea" name='bio' id='bio' style={{ height: 100 }} />
+                                </Col>
+                            </Row>
                         </FormGroup>
-                        <Row sm="1">
-                            <Label>Bio</Label>
-                            <Input type="textarea" style={{ height: 150 }} />
-                        </Row>
-
-
+                        
+                        <div>
+      <InputGroup>
+        <InputGroupAddon addonType="prepend">
+          <InputGroupText>@</InputGroupText>
+        </InputGroupAddon>
+        <Input placeholder="instagram" />
+      </InputGroup>
+      <br />
+                        </div>
                     </Form>
                 </ModalBody>
             </Modal>
