@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Form, Modal, Button, ModalBody, ModalHeader, FormGroup, Label, Row, Col, InputGroup, InputGroupAddon, InputGroupText, Input  } from 'reactstrap';
-import "./Profile.css";
+import "../Profile/Profile.css";
 
-const ProfileEdit = (props) => {
+const ReviewJack = (props) => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
     return (
         <div>
-            <Button align='center' color='info' onClick={toggle}>Edit Profile</Button>
+            <Button align='right' color='success' onClick={toggle}>Write a review</Button>
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>
-                    Update Your Profile
+                   Write a Review
                 </ModalHeader>
                 <ModalBody>
                     <Form>
@@ -26,33 +26,23 @@ const ProfileEdit = (props) => {
                                     <Input name='last' id='last'></Input>
                                 </Col>
                             </Row>
-                            <Row>
-                                <Col>
-                                <Label for = 'email'>email</Label>
-                                <Input name='email' id='email'></Input>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Label for='bio'>Bio</Label>
-                                    <Input type="textarea" name='bio' id='bio' style={{ height: 100 }} />
-                                </Col>
-                            </Row>
-                        </FormGroup>
-                        
-                        <div>
-      <InputGroup>
-        <InputGroupAddon addonType="prepend">
-          <InputGroupText>@</InputGroupText>
-        </InputGroupAddon>
-        <Input placeholder="instagram" />
-      </InputGroup>
-      <br />
-                        </div>
+                            <Row> <Col><FormGroup check>
+            <Label check>
+              <Input type="checkbox" id="checkbox2" />{' '}
+              I want this review to be anonymous
+            </Label>
+          </FormGroup></Col></Row>
+          <Row><Col>
+          <Label for='review'>Review</Label>
+                                    <Input type="textarea" name='review' id='review' style={{ height: 100 }} />
+          </Col></Row>
+
+                       </FormGroup>
                     </Form>
+                    <Button align='right' color ='success'>submit</Button>
                 </ModalBody>
             </Modal>
         </div>
     );
 };
-export default ProfileEdit;
+export default ReviewJack;

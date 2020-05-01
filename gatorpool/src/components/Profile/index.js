@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../Nav';
 import RideCard from '../RideCard';
 import ProRider from '../ProRider';
-import {Row, Col, Container, Button} from 'reactstrap';
+import {Row, Col, Container, Button, Card, CardText, CardTitle} from 'reactstrap';
 import GatorLogo from '../Landing/GatorLogo.png'
 import './Profile.css'
 import profPic from './gw.jpg';
@@ -71,7 +71,18 @@ class Profile extends React.Component{
                 </Row>
                     <h2 style={{padding: 10}}>Reviews</h2>
                 <Container>
-                    
+                <Row>
+        <Card body style={{ backgroundColor: '#dce7f7'}}>
+          <CardTitle><h4>Johnny Appleseed</h4></CardTitle>
+          <CardText>I really enjoyed my ride with George, he's a good driver and super friedly. He even dropped me off at my dorm after!</CardText>
+        </Card>
+        </Row>
+        <Row>
+        <Card body style={{ backgroundColor: '#dce7f7'}}>
+          <CardTitle><h4>Anonymous</h4></CardTitle>
+          <CardText>He is very friendly but not the best driver. I felt someone unsafe in the car becuase he would speed and run stop signs.</CardText>
+          </Card>
+        </Row>
                 </Container>
             </div>
         )

@@ -2,10 +2,11 @@ import React from 'react';
 import Nav from '../Nav';
 import RideCard from '../RideCard';
 import ProRider from '../ProRider';
-import {Row, Col, Container} from 'reactstrap';
+import {Row, Col, Container, Card, CardText, CardTitle} from 'reactstrap';
 import GatorLogo from '../Landing/GatorLogo.png'
 import '../Profile/Profile.css';
 import profPic from './jack.jpg';
+import ReviewJack from './reviewJack';
 
 class ProfileJack extends React.Component{
     constructor(props){
@@ -64,6 +65,22 @@ class ProfileJack extends React.Component{
                 <Row>
                     {customCards}
                 </Row>
+                <Row>
+                    <Col>
+                    <h2 style={{padding: 10}}>Reviews</h2>
+                    </Col>
+                    <Col align = 'right'>
+                    <ReviewJack />
+                    </Col>
+                    </Row>
+                <Container>
+                <Row>
+        <Card body style={{ backgroundColor: '#dce7f7'}}>
+          <CardTitle><h4>George Washington</h4></CardTitle>
+          <CardText>Love this man! Super chill, good driver and respectful rider!</CardText>
+        </Card>
+        </Row>
+        </Container>
             </div>
         )
     }

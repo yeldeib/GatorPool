@@ -2,10 +2,11 @@ import React from 'react';
 import Nav from '../Nav';
 import RideCard from '../RideCard';
 import ProRider from '../ProRider';
-import {Row, Col, Container} from 'reactstrap';
+import {Row, Col, Container, Card, CardTitle, CardText, Button} from 'reactstrap';
 import GatorLogo from '../Landing/GatorLogo.png'
 import '../Profile/Profile.css';
 import profPic from './ja.jpg';
+import Review from "./review";
 
 class ProfileJohnny extends React.Component{
     constructor(props){
@@ -22,9 +23,11 @@ class ProfileJohnny extends React.Component{
                     id: '1'
                 }
             ],
-            currentRide:{}
+            currentRide:{},
+            modal: false
         }
     }
+    
 
     render(){
         let customCards = this.state.rides.map(newCard => {
@@ -64,7 +67,24 @@ class ProfileJohnny extends React.Component{
                 <Row>
                     {customCards}
                 </Row>
-            </div>
+                <Row>
+                    <Col>
+                    <h2 style={{padding: 10}}>Reviews</h2>
+                    </Col>
+                    <Col align = 'right'>
+                    <Review />
+                    </Col>
+                    </Row>
+                <Container>
+                <Row>
+        <Card body style={{ backgroundColor: '#dce7f7'}}>
+          <CardTitle><h4>George Washington</h4></CardTitle>
+          <CardText>Great Guy! Super nice and respectful rider!</CardText>
+        </Card>
+        </Row>
+        </Container>
+        </div>
+           
         )
     }
 }

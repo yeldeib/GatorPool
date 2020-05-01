@@ -83,6 +83,9 @@ const RideCard = (props) => {
                     </Row>
                     <Row >
                         <Col>
+                        <h5>Pickup location: Norman Parking Garage</h5>
+                        </Col>
+                        <Col>
                         <h5>Phone number: 123-456-7890</h5>
                         </Col>
                         <Col>

@@ -1,15 +1,17 @@
-import React from 'react'; 
+import React, { useState } from 'react';
 import "./CreateRide.css";
 import Nav from '../Nav';
-import {Button, Input, CustomInput, Row, Col, Form, FormGroup, Label} from 'reactstrap';
+import { Button, Input, CustomInput, Row, Col, Form, FormGroup, Label, Tooltip } from 'reactstrap';
 
-class CreateRide extends React.Component{
-    constructor(props){
-        super(props);
-    }
+const CreateRide = () => {
+    
+    const [tooltipOpen, setTooltipOpen] = useState(false);
 
-    render(){
-        return(
+    const toggle = () => setTooltipOpen(!tooltipOpen);
+
+
+    
+        return (
             <div>
                 <Nav />
                 <div>
@@ -22,31 +24,36 @@ class CreateRide extends React.Component{
                                 <Label> Starting location:</Label>
                             </Col>
                             <Col sm="4">
-                                <Input type="text" name="pickup" placeholder="pickup location"  />
+                                <Input type="text" name="pickup" placeholder="pickup location" />
                             </Col>
 
                             <Col sm="2">
                                 <Label> Destination:</Label>
                             </Col>
                             <Col sm="4">
-                                <Input type="text" name="destination" placeholder="destination"  />
+                                <Input type="text" name="destination" placeholder="destination" />
                             </Col>
-                            
+
                         </Row>
                     </FormGroup>
                     <FormGroup>
                         <Row>
-                        <Col sm="2">
+                            <Col sm="2">
                                 <Label>Date:</Label>
                             </Col>
                             <Col sm="4">
-                                <Input type="date" name="day_month" placeholder="date placeholder"/>
+                                <Input type="date" name="day_month" placeholder="date placeholder" />
                             </Col>
                             <Col sm="2">
-                                <Label>Other Passengers: </Label>
+                                <Label>
+                                     <span style={{ textDecoration: "underline", color: "blue" }} href="#" id="TooltipExample">Pickup Location</span>.
+                                     </Label>
+                                <Tooltip placement="right" isOpen={tooltipOpen} target="TooltipExample" toggle={toggle}>
+                                    Specify where you want riders to meet you. Common places on campus are a good meeting point, such as Jennings Hall, the stadium, and Norman Parking Garage.
+                                </Tooltip>
                             </Col>
                             <Col sm="4">
-                                <Input type="text" name="others" placeholder="others"/>
+                                <Input type="text" name="others" placeholder="others" />
                             </Col>
                         </Row>
                     </FormGroup>
@@ -55,18 +62,18 @@ class CreateRide extends React.Component{
                             <Col sm="2">
                                 <Label>Time: </Label>
                             </Col>
-                           
+
                             <Col sm="3">
                                 <CustomInput type="time" name="when" placeholder="time placeholder" inline />
                             </Col>
-                            
+
                         </Row>
-                    </FormGroup>                    
+                    </FormGroup>
                     <Button type="submit"> Submit </Button>
                 </Form>
             </div>
         );
-    }
+    
 }
 
 export default CreateRide;
